@@ -83,15 +83,12 @@ div.logo_header{
     max-width: 300px;
     text-align: center;
 }
-
 div.logo_header span{
     margin: 0 10px;
     font-size: 28px;
     font-weight: 600;
     color: #222;
 }
-
-
 nav.nav_header{
     width: 95%;
     height: 100%;
@@ -99,17 +96,15 @@ nav.nav_header{
     flex-direction: row;
     align-items: center;
 }
-
 ul.links_nav{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: #fff;
 }
-
 ul.links_nav a{
     text-decoration: none;
     color: #222;
@@ -149,43 +144,148 @@ div.horizontal_line{
     background-color: var(--blue);
 }
 
+footer{
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue-dark);
+}
+footer div.secoes_f{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+div.secoes_f div.secao{
+    margin: 20px 0;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.secao span{
+    margin: 0 7vw 10px 0;
+    color: #fff;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+div.secao p{
+    color: #fff;
+    font-size: 1.2em;
+    width: 70%;
+}
+div.secao.menu_f ul a{
+    color: #fff;
+    text-decoration: none;
+}
+div.secao.menu_f ul a:hover li{
+    color: var(--blue);
+    background-color: #fff;
+}
+div.secao.menu_f ul a li{
+    padding: 10px 20px;
+    font-size: 1.3em;
+    list-style: none;
+    transition: 200ms ease all;
+}
+div.secao.form_f form{
+    display: flex;
+    flex-direction: column;
+}
+div.secao.form_f form input[type="email"]{
+    margin: 0 0 10px 0;
+    padding: 14px;
+    width: 21vw;
+    font-size: 1.1em;
+    outline: none;
+}
+div.secao.form_f form input[type="submit"]{
+    padding: 10px 0;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: var(--blue);
+    cursor: pointer;
+    transition: 200ms ease all;
+}
+div.secao.form_f form input[type="submit"]:hover{
+    background-color: var(--blue-hv);
+}
+footer div.info_f{
+    border-top: 3px solid #fff;
+    padding: 20px 0 0 0;
+    width: 90%;
+    text-align: center;
+}
+footer div.info_f p,
+footer div.info_f p a{
+    color: #fff;
+    font-size: 20px;
+}
 @media screen and (max-width: 870px){
+    header.header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
     div.social_header{
         display: none;
     }
-
     label[for="checar"]{
         display: flex;
-        margin: 0 20px 0 0;
+        margin: 0 50px 0 0;
     }
-
     nav.nav_header{
         justify-content: flex-end;
     }
-
     ul.links_nav{
         position: fixed;
-        top: 61px;
-        right: -100%;
-        max-width: 400px;
-        padding: 5vw 0 0 0;
+        top: 59px;
+        right: -1000%;
+        width: 50vw;
+        height: 100%;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
         transition: 300ms ease-in-out;
     }
-
     ul.links_nav a{
-        margin: 5vw 0;
-        height: auto;
-        width: 80%;
+        margin: 5px 0;
+        width: 100%;
+        height: 60px;
         text-align: center;
     }
-
-    ul.links_nav a li{
-        padding: 2vw 0;
-    }
-
     input#checar:checked ~ ul.links_nav{
         right: 0%;
+    }
+
+    footer div.secoes_f{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.secoes_f div.secao{
+        width: 80%;
+    }
+    div.secao span{
+        margin: 0 0 0 0;
+    }
+    div.secao p{
+        margin: 10px 0 0 0;
+        max-width: 430px;
+        text-align: center;
+    }
+    div.secoes_f div.secao:nth-child(2){
+        display: none;
+    }
+    div.secao.form_f form input[type="email"]{
+        margin: 10px 0;
+        width: 60vw;
+    }
+    footer div.info_f{
+        margin: 20px 0 0 0;
     }
 }

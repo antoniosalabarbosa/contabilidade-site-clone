@@ -5,14 +5,13 @@ section.sec{
     justify-content: center;
     align-items: center;
 }
-
 section.sec.sec_home{
+    padding: 0 0 50px 0;
     height: 100%;
     min-height: 600px;
     max-height: 800px;
     background-color: #fff;
 }
-
 div.container_sec{
     width: 100%;
     height: 100%;
@@ -21,14 +20,12 @@ div.container_sec{
     justify-content: center;
     align-items: center;
 }
-
 div.container_sec.sec_bg_img{
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 20%;
 }
-
 div.cx_sec{
     width: 100%;
     height: 100%;
@@ -68,16 +65,159 @@ button{
     cursor: pointer;
     transition: 300ms ease-in;
 }
-
 div.dark_container a
 button:hover{
+    position: relative;
+    z-index: -1;
     transform: translateY(10%);
 }
+div.cx_caixas{
+    margin: 35px 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+div.caixa{
+    border-radius: 8px;
+    padding: 60px 40px 120px 40px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+div.caixa:nth-child(1){ margin: -150px 20px 0 0; }
+div.caixa:nth-child(3){ margin: -150px 0 0 20px; }
+div.caixa:nth-child(2){
+    background: rgb(7,17,51);
+    background: linear-gradient(0deg, rgba(7,17,51,1) 0%, rgba(9,41,159,1) 100%);
+    margin: -200px 13px 0 13px;
+}
+div.caixa:nth-child(2) span,
+div.caixa:nth-child(2) p{
+    color: #fff;
+}
+div.caixa img{
+    width: 80px;
+    height: 80px;
+}
+div.caixa span{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 10px 0 20px 0;
+}
+div.caixa p{
+    max-width: 250px;
+    text-align: center;
+}
+div.cx_sobre_nos{
+    margin: 30px 0 0 0;
+    padding: 10px 0 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+div.cx_sobre_nos div:nth-child(1),
+div.cx_sobre_nos div:nth-child(2){
+    flex: 1;
+    margin: 0 10px;
+}
+div.sobre_img{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.sobre_img div.sobre_cx_img{
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    background-color: #222;
+}
+div.sobre_cx_anos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+div.cx_anos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+div.cx_anos img{
+    width: 60px;
+    height: 60px;
+}
+div.cx_anos div span{
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #222;
+}
+div.sobre_text{
+    max-width: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+div.sobre_text span{
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 10px 0 0 0;
+}
+div.sobre_text h1{
+    font-size: 2.4em;
+    max-width: 500px;
+    color: #222;
+    margin: 20px 0 0 0;
+}
+div.sobre_text div{
+    flex: 1;
+}
+div.sobre_text div p{
+    font-size: 1em;
+    max-width: 500px;
+    margin: 20px 0;
+}
+div.sobre_text div a button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1.7em;
+    color: #fff;
+    background-color: var(--blue);
+    cursor: pointer;
+    transition: 200ms ease;
+}
+div.sobre_text div a button:hover{
+    background-color: var(--blue-hv);
+}
 
-@media screen and (max-width: 870px){
-    div.cx_sec{
-        align-items: center;
+
+
+@media screen and (max-width: 1060px){
+    div.cx_caixas{
+        width: 100%;
+        margin: -80px 0 0 0;
+        flex-wrap: wrap;
     }
+    div.caixa:nth-child(1){ margin: 0 10px 20px 10px; }
+    div.caixa:nth-child(3){ margin: 0 10px 20px 10px; }
+    div.caixa:nth-child(2){ margin: 0 10px 20px 10px; }
+}
+@media screen and (max-width: 870px){
+    div.cx_sec{ align-items: center; }
     div.dark_container{
         width: 80%;
         max-width: none;
@@ -100,127 +240,52 @@ button:hover{
     button{
         margin: 0 0 0 0;
     }
-}
-
-div.cx_caixas{
-    margin: -100px 0 0 0;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-div.caixa{
-    margin: 25px;
-    border-radius: 5px;
-    padding: 50px 25px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-}
-
-div.caixa img{
-    width: 80px;
-    height: 80px;
-}
-div.caixa span{
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-
-div.cx_sobre_nos{
-    padding: 10px 0 30px 0;
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-div.cx_sobre_nos div:nth-child(1),
-div.cx_sobre_nos div:nth-child(2){
-    flex: 1;
-    margin: 0 10px;
-}
-div.sobre_img{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-div.sobre_img div.sobre_cx_img{
-    margin: 0 0 20px 0;
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    max-height: 400px;
-    background-color: #222;
-}
-
-div.sobre_cx_anos{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-div.cx_anos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-div.cx_anos img{
-    width: 60px;
-    height: 60px;
-}
-div.cx_anos div span{
-    font-size: 3vw;
-    font-weight: 600;
-    color: #222;
-}
-
-div.sobre_text{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-div.sobre_text span{
-    color: var(--blue);
-    font-weight: 600;
-    font-size: 18px;
-    margin: 3vw 0 0 0;
-}
-div.sobre_text h1{
-    font-size: 30px;
-    max-width: 500px;
-    color: #222;
-    margin: 1vw 0 0 0;
-}
-div.sobre_text div{
-    flex: 1;
-}div.sobre_text div p{
-    font-size: 16px;
-    max-width: 500px;
-    margin: 20px 0;
-}
-
-div.sobre_text div a button{
-    padding: 10px 20px;
-    border-radius: 7px;
-    font-size: 20px;
-    color: #fff;
-    background-color: var(--blue);
-    cursor: pointer;
-    transition: 200ms ease;
-}
-div.sobre_text div a button:hover{
-    background-color: var(--blue-hv);
-}
-
-@media screen and (max-width: 800px){
-
+    div.logo_header span{
+        margin: 0 0 0 20px;
+    }
+    div.dark_container a button{
+        margin: 2vw 0 0 0;
+        padding: 20px 15px;
+        font-size: 1em;
+    }
+    div.sobre_img{
+        max-width: none;
+        align-items: center;
+    }
+    div.sobre_img div.sobre_cx_img{
+        width: 80vw;
+    }
+    div.sobre_cx_anos{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    div.cx_sobre_nos{
+        padding: 10px 0 30px 0;
+        flex-direction: column;
+    }
+    div.sobre_text{
+        align-items: center;
+        max-width: none;
+    }
+    div.sobre_text span{
+        margin: 40px 0 0 0;
+        font-weight: 400;
+    }
+    div.sobre_text h1{
+        font-size: 2em;
+        margin: .5em 0 0 0;
+        text-align: center;
+    }
+    div.sobre_text div p{
+        padding: 0 10px;
+        max-width: 750px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    div.sobre_text div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
